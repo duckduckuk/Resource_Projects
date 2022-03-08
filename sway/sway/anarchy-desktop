@@ -1,0 +1,20 @@
+workspace 1 output 'Acer Technologies XG270HU T1TAA0018523'
+workspace 2 output 'Hewlett Packard HP 24uh CNK7500VZC'
+workspace 9 output 'Samsung Electric Company SAMSUNG 0x00000F00'
+bindsym mod4+c output HDMI-A-1 toggle
+bindsym mod4+r exec pkill thunderbird & pkill electron & pkill nheko
+bindsym mod4+w exec iridium & teams & stoken-gui & handlr open https://remote.imf.org & remmina -c ~/.local/share/remmina/group_rdp_default_192-168-1-144.remmina
+output HDMI-A-1 disable
+workspace 10 output 'Hewlett Packard HP 24uh CNK7500VZC'
+assign [class="Wfica"] workspace number 10
+for_window [class="Chromium-browser"] floating enable; move container to workspace number 2
+output HDMI-A-1 {
+	mode 1920x1080@60Hz
+	pos 0 1448
+}
+output DP-1 { 
+	mode 2560x1440@144Hz
+	max_render_time 1
+	pos 0 0
+}
+output DP-2 pos 2560 360

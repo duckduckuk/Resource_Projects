@@ -1,0 +1,15 @@
+exec "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
+exec echo 25 > $SWAYSOCK.wob
+exec gammastep
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec mako -c ~/.config/mako/config
+exec mkdir /tmp/Pictures/ & mv ~/Pictures/.clipboard/* /tmp/Pictures/
+exec mkfifo $SWAYSOCK.wob && tail -f $SWAYSOCK.wob | wob --border-color '
+exec sh -c 'sleep 10' && easyeffects --gapplication-service
+exec sh -c 'sleep 1' && waybar
+exec swayidle timeout 600 "swaylock --grace 60 --fade-in 2 --screenshot --effect-blur 7x5 --effect-vignette 1:1" timeout 660 "systemctl suspend"
+exec swaylock --image=~/.config/sway/wallpaper/background-locked.png
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec_always kanshi
+exec_always sh -c 'sleep 1' && sworkstyle
+exec_always pkill sworkstyle

@@ -1,0 +1,22 @@
+input type:keyboard {
+	repeat_delay 195
+	repeat_rate 70
+}
+input type:pointer {
+	accel_profile flat
+}
+input type:touchpad {
+	tap enabled
+	accel_profile adaptive
+	tap_button_map lmr
+}
+input 6421:4167:ZY.Ltd_ZY_Control_System_Control {
+
+}
+input 6421:4167:ZY.Ltd_ZY_Control {
+
+}
+input 6421:4167:ZY.Ltd_ZY_Control_Consumer_Control {
+	accel_profile flat
+	pointer_accel 1
+}

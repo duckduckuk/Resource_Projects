@@ -1,3 +1,5 @@
+Windows find virus with PyInstaller - use Nuitka...
+
 Install PyInstaller from PyPI:
 
 pip install pyinstaller
@@ -13,3 +15,9 @@ pyinstaller -F --paths=<your_path>\Lib\site-packages  yourprogram.py
 running into "ImportError" you might consider side-packages.
 
  pip install pynput==1.6.8
+
+=== NUITKA ===
+python -m pip install nuitka
+
+python -m nuitka --mingw64 filename.py
+

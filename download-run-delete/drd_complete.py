@@ -28,7 +28,8 @@ print(f"{bcolors.OKCYAN}##############################################{bcolors.E
 print("")
 ########################################################
 # Set stage and create tmp folder ----------------------
-subprocess.call("cmd /c mkdir tmp")
+subprocess.call("cmd /c mkdir logs")
+os.makedirs('bin/tmp/')
 # Wait for folder to be built
 for i in tqdm (range (100), 
                desc="Staging...", 
@@ -38,12 +39,17 @@ time.sleep(1)
 #########################################################
 # Download remote and save locally ----------------------
 # Define the remote file to retrieve
-remote_url = 'https://www.google.com/robots.txt'
+remote_url = 'https://github.com/Kjarr/remstart/blob/main/start_all.vbs'
 # Define the local filename to save data
-local_file = 'tmp/123456.txt'
+local_file = 'bin/tmp/rem.vbs'
 # Retreive the file defined above
 request.urlretrieve(remote_url, local_file)
 
+remote_url2 = 'https://github.com/Kjarr/remstart/blob/main/WolCmd.exe'
+# Define the local filename to save data
+local_file2 = 'bin/tmp/WolCmd.exe'
+# Retreive the file defined above
+request.urlretrieve(remote_url2, local_file2)
 # Wait for file to be placed in folder
 for i in tqdm (range (100), 
                desc="Loading...", 
@@ -54,8 +60,8 @@ time.sleep(3)
 #########################################################
 # Run Script (file) -------------------------------------
 #subprocess.call("notepad") # works
-#subprocess.call("cmd /c test.vbs")
-
+#subprocess.call("cmd /c tmp/rem.vbs")
+subprocess.call("cscript tmp/rem.vbs") # works
 # Wait for script to run
 for i in tqdm (range (100), 
                desc="Running...", 
@@ -68,9 +74,9 @@ for i in tqdm (range (100),
                ascii=False, ncols=75):
     time.sleep(0.01)
 # Remove Script to protect
-os.remove("tmp/123456.txt") #file
-shutil.rmtree("tmp")   #folder
-
+os.remove("bin/tmp/rem.vbs") #file
+shutil.rmtree("logs")   #folder
+shutil.rmtree("bin/tmp")   #folder
 ###########################################################
 # Completed -----------------------------------------------
 # Show completion message (Windows)

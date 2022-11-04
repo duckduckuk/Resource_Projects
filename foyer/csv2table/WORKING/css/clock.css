@@ -1,0 +1,127 @@
+body {
+    font-family: "Work Sans", sans-serif;
+}
+.time {
+    background: #1f567c;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    width: 300px;
+ 
+}
+.hms {
+    font-size: 48pt;
+    font-weight: 200;
+}
+.ampm {
+    font-size: 12pt;
+}
+.date {
+    font-size: 10pt;
+}
+
+.weather {
+    background: #1f567ccc;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    width: 200px;
+    min-height: 150px;
+}
+
+.event {
+    /*background: #1f567ccc;*/
+    color: #fff;
+    padding: 8px;
+    padding-left:16px;
+    text-align: left;
+    font-size: 34px !important;
+    width: 1000px;
+    min-height: 150px;
+    /*border-top: solid 5px #fff;*/
+    /*border-bottom: solid 5px #fff;*/
+}
+
+.event h1{
+    color: #fff;
+    background: #ff4400cc;
+    font-size: 44px !important;
+    font-weight: semibold;
+    line-height:200%;
+    padding-left: 10px;
+    padding-right: 10px;
+/*    border-radius:5px;*/
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 10px 7px rgba(140,140,140,0.11); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 10px 7px rgba(140,140,140,0.11);
+    visibility: hidden;
+}
+.event h2{
+    color: #fff;
+    background: #1f567ccc;
+    font-size: 32px !important;
+    font-weight: semibold;
+    line-height:200%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius:5px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 10px 7px rgba(140,140,140,0.11); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 10px 7px rgba(140,140,140,0.11);
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: right;
+}
+
+/* */ 
+header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('../assets/sea.mp4') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}

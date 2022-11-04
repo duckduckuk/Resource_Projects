@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>The Big Picture - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/clock.css" rel="stylesheet" />
+        <link href="css/marquee.css" rel="stylesheet" />
+        <link href="css/list.css" rel="stylesheet" />
+  	    <!--<script defer src="/js/1b-read-csv.js"></script>-->
+        <script defer src="/js/2b-ajax-csv.js"></script>
+
+</head>
+    <body>
+
+<header>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+    </ol>
+    <div class="carousel-inner" role="listbox">
+  <div class="overlay"></div>
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" data-interval="8000" style="background-image: url('/images/roller.jpg')">
+      </div>
+
+      <!-- Slide Two0 - Set the background image for this slide in the line below -->
+      <div class="carousel-item" data-interval="8000" style="background-image: url('/images/tele.jpg')">
+      </div>
+
+      <!-- Slide Two1 - Set the background image for this slide in the line below -->
+      <div class="carousel-item" data-interval="8000" style="background-image: url('/images/tele2.jpg')">
+      </div>
+
+      <!-- Slide Two2 - Set the background image for this slide in the line below 
+      <div class="carousel-item" data-interval="8000" style="background-image: url('assets/3.png')">
+      </div>
+    -->
+
+
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item" data-interval="10000" style="background-image: url('#')">
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="./assets/plant.mp4" type="video/mp4">
+  </video>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+</header>
+
+        <!-- Navigation One-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+            <div class=""">
+
+<div class="">
+
+  <div class="row">
+
+    <div class="col-md-12">
+	<div class="event">
+	<h1>PLANT SERVICES</h1>
+
+<div id="list">
+
+
+        <div class="col-12">
+            <!-- method 1 - sizing classes -->
+            <div class="list-group d-flex flex-row flex-wrap">
+            <!-- (B) GENERATE HTML TABLE HERE -->
+            <table id="demoTable"></table>
+            </div>
+        </div>
+
+
+</div>
+
+	</div>
+    </div>
+            <!-- (A) PICK CSV FILE -->
+            <!--<input type="file" accept=".csv" id="demoPick">-->
+  </div>
+</div>
+
+
+       </div>
+        </nav>
+
+        <!-- Navigation Two-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-bottom">
+    <div class="col-md-2">
+	<div class="time">
+	 <span class="hms"></span>
+	 <span class="ampm"></span>
+	 <br>
+	 <span class="date"></span>
+	</div>
+    </div>
+            <div class="col-md-10">
+<a class="weatherwidget-io" href="https://forecast7.com/en/52d870d63/bircham-newton/" data-label_1="BIRCHAM" data-icons="Climacons Animated" data-days="3" data-theme="original" >BIRCHAM</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+<div class="">
+
+<!-- -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
+                <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 px-1 news"><span class="d-flex align-items-center text-white">&nbsp;INFORMATION</span></div>
+                <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a> The on-site emergency number is 7000 from a fixed line or 01234 567 7000 from any mobile - when dialing 999 from a fixed line please add 9 for an outside line (9999) </a> <span class="dot"></span> <a>Please wear a face mask when indoors. </a> <span class="dot"></span> <a> Please ensure you have written down your lunch order before 09:45am</a> </marquee>
+            </div>
+        </div>
+    </div>
+<!-- -->
+
+       </div>
+        </nav>
+
+
+        <!-- Page Content-->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+	<script src="js/clock.js"></script>
+    	<script src="js/rss-marquee.js"></script>
+    </body>
+</html>

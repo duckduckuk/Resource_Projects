@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="papaparse.min.js"></script>
+</head>
+<body>
+<script>var txt ="";var Ary ="";$.get('csv.txt', function (data) {    txt = data;    Ary = txt.split(",");    document.getElementById("Gain").innerHTML = "Gain: "+"$"+Ary[0];    document.getElementById("Maxrunup").innerHTML = "Max RunUp: "+"$"+Ary[1];    document.getElementById("Drawdown").innerHTML = "Drawdown: "+"$"+Ary[2];    document.getElementById("Acctsize").innerHTML = "Min Account Size: "+"$K"+Ary[3];});</script>
+
+</body>
+</html>

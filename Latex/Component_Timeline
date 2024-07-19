@@ -1,0 +1,75 @@
+% IMPORTANT: This is a reference only file. Please Check ReadMe and Licences for usage - this file may require attribution before use.
+\documentclass{article}
+\title{COMPONENT: MAP}
+\author{Shaun}
+%%% %%% %%%
+
+% ----------------------------------------------------------------------------------------
+% Roadmap Packages
+% ----------------------------------------------------------------------------------------
+\usepackage[many]{tcolorbox}
+\usepackage{transparent}
+% ----------------------------------------------------------------------------------------
+% Roadmap Commands
+% ----------------------------------------------------------------------------------------
+\newtcolorbox{linemaster}[2]{%
+blanker, breakable, 
+     left=5mm, left skip=10.2mm,
+     top=-2.2mm,
+     coltitle=black,
+     attach boxed title to top left={yshift=-12mm, xshift=-13mm},
+     fonttitle=\bfseries\Large,
+     finish={\draw[#2, line width=3mm,line cap=round]
+(frame.south west) -- (frame.north west);},
+    title={\rotatebox{90}{#1}}
+}
+\newtcolorbox{lineslave}[2]{%
+blanker,  
+     left=11mm,top=4mm,
+          finish={\draw[#2, line width=3mm,line cap=round]
+(frame.south west) -- (frame.north west);},
+     coltitle=#2,
+     attach boxed title to top left={yshift=-4mm},
+     fonttitle=\bfseries,
+    title={#1}
+}
+
+\newcommand{\release}[2]{%
+        #1
+        \hspace*{\fill}
+        \textcolor{gray}{#2}\par}
+% ----------------------------------------------------------------------------------------
+% REND PREAMBLE
+% ----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% ----------------------------------------------------------------------------------------
+% Roadmap Content
+% ----------------------------------------------------------------------------------------
+\section{College Roadmap}
+    \begin{small}
+    \textit{Each segment does not represent a whole day. This is only a guide to show you what you can expect each week but there may be slight occasional changes.}
+    \end{small}
+    
+    \begin{linemaster}{\hspace*{-4cm} ROLLER PATHWAY }{orange}
+        \begin{lineslave}{Component One - {\normalfont Safety and Machine Components}}{orange!50}
+            \release{Safety Theory:}{Classroom}
+            \release{Component Overview:}{Class and Field}        
+            \release{Field}{Catchup Session}
+        \end{lineslave}
+        \begin{lineslave}{Component Two}{orange!50}
+            \release{Inspections Overview 1}{Classroom}
+            \release{Inspections Overview 2}{Field/Hangar}
+            \release{Basic Operating}{Field}        
+            \release{Field}{Catch up Practical}
+        \end{lineslave}
+        \begin{lineslave}{Component}{orange!50}
+        \release{Classroom}{EPA Preparation}
+        \end{lineslave}
+        \begin{lineslave}{Component Four}{orange!50}
+        \release{Classroom}{EPA Practice}
+        \end{lineslave}
+    \end{linemaster}
+
+\end{document}
